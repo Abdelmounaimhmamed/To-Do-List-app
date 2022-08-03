@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css"/>
+    <title>todolist app </title>
+</head>
+<body>
+     <div class="buttons">
+        <h1>To-Do-List-app:</h1>
+        <a class="button" href="contact">Contact</a>
+     </div>
+
+    <div class="container">
+        <div class="container-1">
+            <form action="/" method="post" class="form" >
+                <input type="text" name="text" placeholder="enter to do item" required class="input" />
+                <div class="buttons">
+                    <button class="button" type="reset">reset</button>
+                    <button class="button" type="submit">Add item</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="lists">
+            <ul>
+                <% items.forEach(item => { %>
+                    <div class="item">
+                        <div class="block">
+                            <li class="li"><%=item.text%></li>
+                             <p class="parag"> <%= item.createdAt.toLocaleDateString() %> </p>
+                        </div>
+                        <form action="/<%=item.id%>?_method=DELETE" method="post" >
+                            <div class="btn">
+                                <button class="button button-1" type="submit">Delete</button>
+                            </div>
+                        </form>
+                    </div>
+                <% }) %>
+               
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

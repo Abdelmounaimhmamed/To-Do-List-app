@@ -1,0 +1,20 @@
+{
+  "name": "to-do-list-app-v_01",
+  "version": "1.0.0",
+  "description": "app to orginize work ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.5.0",
+    "nodemon": "^2.0.19"
+  }
+}
